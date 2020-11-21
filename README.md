@@ -79,16 +79,71 @@ The last experiment of java
 		 return number;
 	 }
    	
-### 在TestLast.java中：   
-  
+### 在TestLast.java中： 
+
+   用户输入需要打开的学生作业的文件（文件名为学生姓名命名）和创建改存放改正作业后的文件
 	
+	File sourceFile = new File("E:\\java实验\\" + student.getName() + ".txt");
+	File targetFile = new File("E:\\java实验\\" + student.getName() + "correct.txt");
+	
+   以下代码用于创建输入输出流，缓冲流，通过调用Student类中的student.getName()；student.getSex()；student.getAge()；student.getNumber()方法，得到学生的姓名，年龄，性别，学号。
+   并存入字符串informat中，将学生的信息写入学生的修改作业的文件的第一行，并换行。
+	Reader in = new FileReader(sourceFile);
+	BufferedReader bufferReader = new BufferedReader(in);
+	Writer out = new FileWriter(targetFile, true);
+	BufferedWriter bufferWriter = new BufferedWriter(out);
+	String information = "姓名:" + student.getName() + "		" + "性别:" + student.getSex() + "		" + "年齡："
+	+ student.getAge() + "		" + "学号:" + student.getNumber();
+	bufferWriter.write(information);
+	bufferWriter.newLine(); 
+	
+   读取学生作业文件的每一行内容，并将学生作业内容储存在字符串变量s中。创建字符数组strone，将学生作业内容储存在字符数组strone中
+	
+  	 String str = null;
+		while ((str = bufferReader.readLine()) != null) {
+			s = s + str;
+		}
+		char strone[] = new char[s.length()];
+		strone = s.toCharArray();
+		
+   对学生作业内容每七个汉字加一符号 ：汉字个数为奇数加“，”，汉字个数为偶数加“。”。并且十四个汉字占一行。
+   
+		for (int i = 1; i <= s.length(); i++) {
+			bufferWriter.write(strone[i - 1]);
+			if (i % 14 == 0) {
+				bufferWriter.write("。");
+				bufferWriter.newLine();
+			} else if (i % 7 == 0) {
+				bufferWriter.write(",");
+			}
+		}
+   以下代码实现让用户输入想要查询作业中汉字字或词语,统计单个汉字在学生作业中出现的次数或两字词语在学生作业中出现的次数。
+   
+			Scanner search = new Scanner(System.in);
+			String strFour = search.nextLine();
+			if (strFour.length() == 1) {
+				int t = 0;
+				for (int i = 0; i < s.length(); i++) {
+					char chr1 = s.charAt(i);
+					if (strFour.charAt(0) == chr1) {
+						t++;
+					}
+				}
+				System.out.println(strFour + "出现的次数为：" + t);
+			} else if (strFour.length() == 2) {
+				int t = 0;
+				for (int i = 0; i < s.length()-1; i++) {
+					char chr2 = s.charAt(i);
+					char chr3 = s.charAt(i + 1);
+					if (strFour.charAt(0) == chr2 && strFour.charAt(1) == chr3) {
+						t++;
+					}
+				}
+				System.out.println(strFour + "出现的次数为：" + t);
+			}
+		}
 ## 五·实验结果
-程序会提示学生输入每一个月的工资，判断是否需要缴税，并计算出每一个月需要缴税金额：  
-https://github.com/li2843645895/-/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201107210021.png  
-当输入每一个月的工资不是双浮点型时，程序会出现报错，并要求学生重新输入：  
-https://github.com/li2843645895/-/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201107210048.png  
-学生输入十二个月的工资和学费后，控制台会输出学生该年需要交的税，该年的工资和该年的学费：
-https://github.com/li2843645895/-/blob/main/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20201107210054.png
+
 ## 六·实验感想
 通过本次实验，我掌握了java中抽象类和抽象方法的定义；掌握了java接口中的定义和接口的定义形式已经接口的实现方法；  
 同了解了异常的使用方法，并可以在程序中根据输入情况做出异常处理；同时也更加巩固了Static和finally的使用；了解了  
