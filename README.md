@@ -88,6 +88,7 @@ The last experiment of java
 	
    以下代码用于创建输入输出流，缓冲流，通过调用Student类中的student.getName()；student.getSex()；student.getAge()；student.getNumber()方法，得到学生的姓名，年龄，性别，学号。
    并存入字符串informat中，将学生的信息写入学生的修改作业的文件的第一行，并换行。
+   
 	Reader in = new FileReader(sourceFile);
 	BufferedReader bufferReader = new BufferedReader(in);
 	Writer out = new FileWriter(targetFile, true);
@@ -143,9 +144,12 @@ The last experiment of java
 			}
 		}
 ## 五·实验结果
-
+运行程序，用户输入学生的姓名，性别，年龄，学号基本信息，并输入想要查询的学生作业文件里的汉字或词语，控制台输出该汉字或词语在学生作业中出现的次数：
+https://github.com/li2843645895/Last-Java-experiment/blob/main/b72fab6bf699d8dd6b67068370f01b6.png
+程序运行后，指定文件路径中增加已修改过的学生作业的文件：
+https://github.com/li2843645895/Last-Java-experiment/blob/main/1c3cf627e2e274c580041cc2d918f0a.png
+批改后学生的作业样式：
+https://github.com/li2843645895/Last-Java-experiment/blob/main/7538a456cb392c40819f80bb5f50439.png
 ## 六·实验感想
-通过本次实验，我掌握了java中抽象类和抽象方法的定义；掌握了java接口中的定义和接口的定义形式已经接口的实现方法；  
-同了解了异常的使用方法，并可以在程序中根据输入情况做出异常处理；同时也更加巩固了Static和finally的使用；了解了  
-Scanner语句的使用，在此次实验中，我深刻体会到了在Java学习中自生知识的储备不足，我一定会更加用心专注Java语言  
+通过本次实验，我掌握了字符串String及其方法的使用，掌握文件的读取和使用方法，掌握异常处理结构。在此次实验中，我深刻体会到了在Java学习中自生知识的储备不足，我一定会更加用心专注Java语言  
 的学习。
