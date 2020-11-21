@@ -157,4 +157,4 @@ https://github.com/li2843645895/Last-Java-experiment/blob/main/1c3cf627e2e274c58
 https://github.com/li2843645895/Last-Java-experiment/blob/main/7538a456cb392c40819f80bb5f50439.png
 
 ## 六·实验感想
-通过本次实验，我掌握了字符串String及其方法的使用，掌握文件的读取和使用方法，掌握异常处理结构。在此次实验中，我深刻体会到了在Java学习中自生知识的储备不足，我一定会更加用心专注Java语言的学习。
+通过本次实验，我掌握了字符串String及其方法的使用，文件的读取和使用方法和异常处理结构。在此次实验中，我深刻体会到了在Java学习中的乐趣。在今后的学习中，我一定会更加用心专注Java语言的学习。
