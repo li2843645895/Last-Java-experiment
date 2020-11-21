@@ -145,11 +145,17 @@ The last experiment of java
 		}
 ## 五·实验结果
 运行程序，用户输入学生的姓名，性别，年龄，学号基本信息，并输入想要查询的学生作业文件里的汉字或词语，控制台输出该汉字或词语在学生作业中出现的次数：
+
 https://github.com/li2843645895/Last-Java-experiment/blob/main/b72fab6bf699d8dd6b67068370f01b6.png
+
 程序运行后，指定文件路径中增加已修改过的学生作业的文件：
+
 https://github.com/li2843645895/Last-Java-experiment/blob/main/1c3cf627e2e274c580041cc2d918f0a.png
+
 批改后学生的作业样式：
+
 https://github.com/li2843645895/Last-Java-experiment/blob/main/7538a456cb392c40819f80bb5f50439.png
+
 ## 六·实验感想
 通过本次实验，我掌握了字符串String及其方法的使用，掌握文件的读取和使用方法，掌握异常处理结构。在此次实验中，我深刻体会到了在Java学习中自生知识的储备不足，我一定会更加用心专注Java语言  
 的学习。
